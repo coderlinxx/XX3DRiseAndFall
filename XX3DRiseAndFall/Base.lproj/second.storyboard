@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VfL-ZE-GzM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="hAl-Na-XNH">
+            <objects>
+                <navigationController id="VfL-ZE-GzM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EEg-Q2-Nns"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7b1-Dh-3kE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zza-Nf-wh4" kind="relationship" relationship="rootViewController" id="blx-ny-fec"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cI-2t-1P7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="611"/>
+        </scene>
+        <!--Second Controller-->
+        <scene sceneID="zAJ-yS-PL3">
+            <objects>
+                <viewController id="zza-Nf-wh4" customClass="SecondController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EEM-s2-SE9"/>
+                        <viewControllerLayoutGuide type="bottom" id="wmm-5u-9p5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="69a-e5-y0S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtL-Lc-3Rx">
+                                <rect key="frame" x="285" y="164" width="30" height="30"/>
+                                <state key="normal" title="下沉"/>
+                                <connections>
+                                    <action selector="fallWithNav:" destination="zza-Nf-wh4" eventType="touchUpInside" id="dVa-wq-p3K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ged-ER-1Ea">
+                                <rect key="frame" x="285" y="417" width="30" height="30"/>
+                                <state key="normal" title="上升"/>
+                                <connections>
+                                    <action selector="riseWithNav:" destination="zza-Nf-wh4" eventType="touchUpInside" id="clI-kL-szt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wmm-5u-9p5" firstAttribute="top" secondItem="Ged-ER-1Ea" secondAttribute="bottom" constant="104" id="728-D9-hcZ"/>
+                            <constraint firstItem="VtL-Lc-3Rx" firstAttribute="top" secondItem="EEM-s2-SE9" secondAttribute="bottom" constant="100" id="KoA-XI-w70"/>
+                            <constraint firstItem="VtL-Lc-3Rx" firstAttribute="centerX" secondItem="69a-e5-y0S" secondAttribute="centerX" id="dGY-af-HdP"/>
+                            <constraint firstItem="VtL-Lc-3Rx" firstAttribute="leading" secondItem="Ged-ER-1Ea" secondAttribute="leading" id="l9p-Bg-caD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fDK-Hp-n2g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s1P-9C-6Tm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="611"/>
+        </scene>
+    </scenes>
+</document>
