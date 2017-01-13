@@ -71,7 +71,7 @@ PS: 如果不处理导航条的话,在实际应用过程中会出现非常low的
 ![record8.gif](http://upload-images.jianshu.io/upload_images/1717878-5ead63e249f4de06.gif?imageMogr2/auto-orient/strip)
 
 调用非常的简单,只要在控制器里如下调用就好了:
-``
+```
 - (IBAction)fallWithNav:(UIButton *)sender {
     [self showWithDuration:0.5 transformType:TransformTypeM32];
 }
@@ -79,4 +79,4 @@ PS: 如果不处理导航条的话,在实际应用过程中会出现非常low的
 - (IBAction)riseWithNav:(UIButton *)sender {
     [self closeWithDuration:0.5 transformType:TransformTypeM32];
 }
-``
+```
